@@ -38,11 +38,6 @@ computed quantities.
     setTarget: (@target) ->
       @lastTime = Date.now()  # used only if dt is not explicit
       return
-if module.exports
-  module.exports = PID
-if window
-  window.PID=PID
-
   
     update: (@currentValue) -> 
       # Calculate dt
@@ -72,3 +67,8 @@ if window
       @lastDelta = 0
       @setTarget 0
       return
+
+if module.exports
+  module.exports = PID
+if window
+  window.PID=PID
