@@ -25,7 +25,8 @@
     "url": "https://github.com/jahbini/PID/issues"
   },
   "scripts": {
-    "postinstall":"coffee -c pid.coffee"
+    "postinstall":"coffee -c pid.coffee",
+    "build":"coffee -c pid.coffee"
   },
   "homepage": "https://github.com/jahbini/PID#readme"
 }

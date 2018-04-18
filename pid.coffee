@@ -68,7 +68,7 @@ computed quantities.
       @setTarget 0
       return
 
-if module.exports
+if module?.exports
   module.exports = PID
 if window
   window.PID=PID
