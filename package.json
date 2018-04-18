@@ -1,0 +1,31 @@
+{
+  "name": "pid-coffee",
+  "version": "1.0.0",
+  "description": "a PID controller written in literate coffeescript",
+  "main": "coffee.js",
+  "scripts": {
+    "test": "sample"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahbini/PID.git"
+  },
+  "keywords": [
+    "coffeescript",
+    "literate",
+    "programming",
+    "pid",
+    "controller",
+    "servo",
+    "controller"
+  ],
+  "author": "James A. Hinds, and many sources",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jahbini/PID/issues"
+  },
+  "scripts": {
+    "postinstall":"coffee -c pid.coffee"
+  },
+  "homepage": "https://github.com/jahbini/PID#readme"
+}
