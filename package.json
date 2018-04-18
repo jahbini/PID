@@ -1,10 +1,11 @@
 {
   "name": "pid-coffee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a PID controller written in literate coffeescript",
   "main": "coffee.js",
   "scripts": {
-    "test": "sample"
+    "postinstall": "coffee -c pid.coffee",
+    "build": "coffee -c pid.coffee"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,6 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jahbini/PID/issues"
-  },
-  "scripts": {
-    "postinstall":"coffee -c pid.coffee",
-    "build":"coffee -c pid.coffee"
   },
   "homepage": "https://github.com/jahbini/PID#readme"
 }
