@@ -52,9 +52,9 @@ computed quantities.
       delta = @target - @currentValue  #used as the Proportional factor
       
       @sumDelta = @sumDelta + delta*dt  #used as the Integral factor
-      if @integrationLimit > 0 && Math.abs(@sumDelta) > @integrationLimit
+      if 0< @integrationLimit < Math.abs(@sumDelta) #if there is an integration limit, check it
         sumSign = if @sumDelta > 0 then 1 else -1
-        @sumDelta = sumSign * @integrationLimit
+        @sumDelta = sumSign * @integrationLimit  # activate the caller's failsafe quantity
   
       dDelta = (delta - @lastDelta)/dt # used as the Derivitive factor
       @lastDelta = delta
