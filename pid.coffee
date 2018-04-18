@@ -1,4 +1,15 @@
-  class Controller
+PID = class PID
+###
+the PID style of controller is intended to track a quantity from the real world as detected by some sensor.
+The sensor is assumed to be reliable as possible, consistent and acccurate.
+the output of the controller is a single quantity that controls a single output device.
+The output device is related in some fashion to changes in the real world that affect the sensor.
+A PID controller ses the input values to compte an output variable by looking at three internally 
+computed quantities.
+1) the Proportial component, which simply is related to "How far away from our goal are we?"
+2) the Integral component, which is related to "How far have we come to our goal?"
+3) the Differential component, which asks "are we taking big steps, or tiny ones?"
+###
     constructor: (proportionalParm, integrationParm, derivativeParm, dt) ->
       if (typeof proportionalParm == 'object')
         options = proportionalParm
@@ -27,6 +38,11 @@
     setTarget: (@target) ->
       @lastTime = Date.now()  # used only if dt is not explicit
       return
+if module.exports
+  module.exports = PID
+if window
+  window.PID=PID
+
   
     update: (@currentValue) -> 
       # Calculate dt
